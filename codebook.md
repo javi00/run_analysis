@@ -1,5 +1,5 @@
-# title: "codebook"
-# author: "Javier Vallejos"
+## title: "codebook"
+## author: "Javier Vallejos"
 
 ## The last dataset with mean and std is 180 columns x 81 variables
 
