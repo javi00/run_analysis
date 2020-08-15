@@ -6,10 +6,15 @@
 ## the column activity is about the list of lables and is order 1 a 30 about its sample
 
 1 WALKING
+
 2 WALKING_UPSTAIRS
+
 3 WALKING_DOWNSTAIRS
+
 4 SITTING
+
 5 STANDING
+
 6 LAYING
 
 ##  the columns is label with 
