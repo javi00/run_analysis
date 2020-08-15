@@ -40,10 +40,29 @@ total <- rbind(total_test,total_train)
 total <- arrange(total, activity)
 
 #4 Appropriately labels the data set with descriptive variable names
-total$activity <- act_label[total$activity,2]
+# total$activity <- act_label[total$activity,2]
 
 #5. Creates a second, independent tidy data set with the average of each variable 
 
+## by sample and activity 
+
+avgt <- c(0)
+
+for(a in 1:30)
+{
+    for ( b in 1:6) {
+        
+        data <- filter(total,total$sample == a & total$activity == act_label[b,1])
+        avg <- sapply(data, mean)
+        avgt <- rbind(avg,avgt)
+    }
+}
+
+total <- as.data.frame(avgt[1:180,])
+
+total$activity <- act_label[total$activity,2]
+
+   
 t1 <- total[total$label == 1,]
 t2 <- total[total$label == 2,]
 t3 <- total[total$label == 3,]
