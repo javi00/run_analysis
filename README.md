@@ -42,5 +42,5 @@ result <-  as.data.frame(result)
 
 write.table(result,"C:/Users/javi_/Documents/R/run_analysis/result.txt", sep = " ",row.name=FALSE)
 
-###############
-#about variables I used the same names that features.txt
+
+# about name variables I used the same names that features.txt
