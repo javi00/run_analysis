@@ -42,7 +42,7 @@ total <- arrange(total, activity)
 #4 Appropriately labels the data set with descriptive variable names
 # total$activity <- act_label[total$activity,2]
 
-#5. Creates a second, independent tidy data set with the average of each variable 
+#5.  , independent tidy data set with the average of each variable 
 
 ## by sample and activity 
 
