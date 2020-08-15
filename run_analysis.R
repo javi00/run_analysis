@@ -11,10 +11,10 @@ colnames(x_test) <- features[,2]
 colnames(y_test) <- "label"
 colnames(subject_test) <- "sample"
 
-#then I merge all test datasets
+#then I merge all test data sets
 total_test <- cbind(subject_test,y_test,x_test)
 
-# load the train datasets 
+# load the train data sets 
 x_train <-  read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/train/X_train.txt", sep = "")
 y_train <-  read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/train/Y_train.txt", sep = "")
 subject_train <-  read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/train/subject_train.txt", sep = "")
@@ -24,7 +24,7 @@ colnames(x_train) <- features[,2]
 colnames(y_train) <- "label"
 colnames(subject_train) <- "sample"
 
-#then I merge all train datasets
+#then I merge all train data sets
 total_train <- cbind(subject_train,y_train,x_train)
 
 #merge to unique dataset with test and train
