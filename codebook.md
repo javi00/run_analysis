@@ -157,16 +157,27 @@
 "69" "fBodyGyro-meanFreq()-Z"
 
 "70" "fBodyAccMag-mean()"
+
 "71" "fBodyAccMag-std()"
+
 "72" "fBodyAccMag-meanFreq()"
+
 "73" "fBodyBodyAccJerkMag-mean()"
+
 "74" "fBodyBodyAccJerkMag-std()"
+
 "75" "fBodyBodyAccJerkMag-meanFreq()"
+
 "76" "fBodyBodyGyroMag-mean()"
+
 "77" "fBodyBodyGyroMag-std()"
+
 "78" "fBodyBodyGyroMag-meanFreq()"
+
 "79" "fBodyBodyGyroJerkMag-mean()"
+
 "80" "fBodyBodyGyroJerkMag-std()"
+
 "81" "fBodyBodyGyroJerkMag-meanFreq()"
 
 
