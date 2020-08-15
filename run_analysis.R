@@ -38,7 +38,7 @@ t4 <- total[total$label == 4,]
 t5 <- total[total$label == 5,]
 t6 <- total[total$label == 6,]
 
-#calculate mean and standard deviation
+#calculate mean and standard  deviation
 mean1 <- sapply(t1, mean)
 str1  <- sapply(t1, sd)
 mean2 <- sapply(t2, mean)
