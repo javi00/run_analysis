@@ -1,14 +1,13 @@
-# first load the features
-features <-  read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/features.txt", sep = "")
+library(dplyr)
 
-# load the test datasets 
+# load the test data sets 
 x_test <-  read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/test/X_test.txt", sep = "")
 y_test <-  read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/test/Y_test.txt", sep = "")
 subject_test <-  read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt", sep = "")
 
-# here I put the name to each column
+# Here I put the name to each column
 colnames(x_test) <- features[,2]
-colnames(y_test) <- "label"
+colnames(y_test) <- "activity"
 colnames(subject_test) <- "sample"
 
 #then I merge all test data sets
@@ -21,7 +20,7 @@ subject_train <-  read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Datas
 
 # here I put the name to each column
 colnames(x_train) <- features[,2]
-colnames(y_train) <- "label"
+colnames(y_train) <- "activity"
 colnames(subject_train) <- "sample"
 
 #then I merge all train data sets
