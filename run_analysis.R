@@ -53,45 +53,17 @@ for(a in 1:30)
     for ( b in 1:6) {
         
         data <- filter(total,total$sample == a & total$activity == act_label[b,1])
+        ## calculate average 
         avg <- sapply(data, mean)
         avgt <- rbind(avg,avgt)
     }
 }
-
+# convert like data frame
 total <- as.data.frame(avgt[1:180,])
-
+# names to to each activity
 total$activity <- act_label[total$activity,2]
 
-   
-t1 <- total[total$label == 1,]
-t2 <- total[total$label == 2,]
-t3 <- total[total$label == 3,]
-t4 <- total[total$label == 4,]
-t5 <- total[total$label == 5,]
-t6 <- total[total$label == 6,]
-
-#calculate mean and standard  deviation
-mean1 <- sapply(total, mean)
-str1  <- sapply(t1, sd)
-mean2 <- sapply(t2, mean)
-str2  <- sapply(t2, sd)
-mean3 <- sapply(t3, mean)
-str3  <- sapply(t3, sd)
-mean4 <- sapply(t4, mean)
-str4  <- sapply(t4, sd)
-mean5 <- sapply(t5, mean)
-str5  <- sapply(t5, sd)
-mean6 <- sapply(t6, mean)
-str6  <- sapply(t6, sd)
-
-# to finish I created only one dataset with mean and standard deviation
-result <- rbind(mean1,str1,mean2,str2,mean3,str3,mean4,str4,mean5,str5,mean6,str6)
-act<-  read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/activity_labels.txt", sep = "")
-
-rownames(result) <- c(act[,2],act[,2])
-
-result <-  as.data.frame(result)
 # write a  table with the results
 
-write.table(result,"C:/Users/javi_/Documents/R/run_analysis/result.txt", sep = " ")
+write.table(total,"C:/Users/javi_/Documents/R/run_analysis/result.txt", sep = " ", row.names = FALSE)
 
